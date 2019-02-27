@@ -1,0 +1,61 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Jua&amp;subset=korean" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+    <title>Beer Lab</title>
+  </head>
+
+  <body>
+
+    <section id="title">
+
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="{% url 'home' %}">
+                    <img src="{% static 'assets/logo.png' %}" width="39" height="57" class="d-inline-block align-top" alt=""><h1 id="brandname">맥주연구소</h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav nav-pills mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{% url 'home' %}">홈<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'reviews' %}">맥주 리뷰<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'intro' %}">소개<span class="sr-only">(current)</span></a>
+                    </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="맥주찾기" aria-label="Search">
+                    <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">찾기</button>
+                    </form>
+                </div>
+            </nav>
+        
+            <!--title-->
+            <div id="videocover">
+            </div>
+            <video autoplay muted loop id="Clip">
+                <source src="{% static 'assets/Clip.mp4' %}" type="video/mp4">
+            </video>
+            <h1 id="maindisplay" class="display-1">오늘 맥주 한잔 콜?</h1>
+            <button id="mainbtn" type="button" class="btn btn-warning .btn-lg .mx-auto" styles="width: 200px;">오늘 맥주 콜!</button>
+        </section>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  </body>
+</html>
