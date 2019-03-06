@@ -1,0 +1,1 @@
+web: gunicorn beersite.wsgi --log-file -
